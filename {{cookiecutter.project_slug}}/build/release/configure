@@ -1,0 +1,7 @@
+#!/bin/bash
+
+SCRIPT_DIRECTORY=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+
+"$SCRIPT_DIRECTORY/../../configure" \
+  CFLAGS="-O3 -DNDEBUG -Wl,-O1" \
+  --prefix="$SCRIPT_DIRECTORY/install"
