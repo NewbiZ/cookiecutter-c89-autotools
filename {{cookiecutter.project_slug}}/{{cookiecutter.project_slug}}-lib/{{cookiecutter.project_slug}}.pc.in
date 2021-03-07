@@ -1,0 +1,13 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: @PACKAGE_NAME@
+Description: {{ cookiecutter.project_name }}
+URL: {{ cookiecutter.url }}
+Version: @VERSION@
+#Requires: @AX_PACKAGE_REQUIRES@
+#Requires.private: @AX_PACKAGE_REQUIRES_PRIVATE@
+Libs: -L${libdir} -l{{ cookiecutter.project_slug }}
+Cflags: -I${includedir}
